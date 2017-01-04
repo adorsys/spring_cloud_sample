@@ -1,0 +1,12 @@
+version: '2.1'
+services:
+  cart:
+    build: cart/
+    image: docker.adorsys.de/smartbanking/spring_cloud/cart
+    ports:
+      - '8081:8081'
+  product:
+    build: product/
+    image: docker.adorsys.de/smartbanking/spring_cloud/product
+    ports:
+      - '8082:8082'
