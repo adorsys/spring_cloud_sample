@@ -5,8 +5,21 @@ services:
     image: docker.adorsys.de/smartbanking/spring_cloud/cart
     ports:
       - '8081:8081'
+    links:
+      - config
+    environment:
+      - SPRING_CLOUD_CONFIG_URI=http://config:8888
   product:
     build: product/
     image: docker.adorsys.de/smartbanking/spring_cloud/product
     ports:
       - '8082:8082'
+    links:
+      - config
+    environment:
+      - SPRING_CLOUD_CONFIG_URI=http://config:8888
+  config:
+    build: config/
+    image: docker.adorsys.de/smartbanking/spring_cloud/config
+    ports:
+      - '8888:8888'
