@@ -1,4 +1,4 @@
 spring:
   application.name: product
   cloud.config.uri: http://localhost:8888
-  cloud.config.failFast: true
+  cloud.config.failFast: false
