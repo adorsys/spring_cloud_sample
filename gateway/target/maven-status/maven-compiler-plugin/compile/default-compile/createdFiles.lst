@@ -1,0 +1,5 @@
+de/adorsys/smartbanking/gateway/filters/pre/DebugRequestFilter.class
+de/adorsys/smartbanking/gateway/filters/pre/ProductRateCounterFilter$RateLimiter.class
+de/adorsys/smartbanking/gateway/filters/pre/ProductRateCounterFilter.class
+de/adorsys/smartbanking/gateway/GatewayApplication.class
+de/adorsys/smartbanking/gateway/filters/route/ProductFallbackFilter.class

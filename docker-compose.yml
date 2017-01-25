@@ -23,3 +23,14 @@ services:
     image: docker.adorsys.de/smartbanking/spring_cloud/config
     ports:
       - '8888:8888'
+  gateway:
+    build: gateway/
+    image: docker.adorsys.de/smartbanking/spring_cloud/gateway
+    ports:
+      - '8080:8080'
+    links:
+      - config
+      - cart
+      - product
+    environment:
+      - SPRING_CLOUD_CONFIG_URI=http://config:8888

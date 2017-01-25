@@ -1,0 +1,4 @@
+/Users/floh/dev/workspaces/adorsys_work/spring_cloud_sample/gateway/src/main/java/de/adorsys/smartbanking/gateway/filters/route/ProductFallbackFilter.java
+/Users/floh/dev/workspaces/adorsys_work/spring_cloud_sample/gateway/src/main/java/de/adorsys/smartbanking/gateway/filters/pre/DebugRequestFilter.java
+/Users/floh/dev/workspaces/adorsys_work/spring_cloud_sample/gateway/src/main/java/de/adorsys/smartbanking/gateway/filters/pre/ProductRateCounterFilter.java
+/Users/floh/dev/workspaces/adorsys_work/spring_cloud_sample/gateway/src/main/java/de/adorsys/smartbanking/gateway/GatewayApplication.java
