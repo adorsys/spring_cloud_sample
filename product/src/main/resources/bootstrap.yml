@@ -1,4 +1,10 @@
 spring:
-  application.name: product
-  cloud.config.uri: http://localhost:8888
-  cloud.config.failFast: true
+  application:
+    name: product
+  cloud:
+    config:
+      uri: http://localhost:8888
+      failFast: true
+      retry:
+        maxAttempts: 10
+        initialInterval: 3000
