@@ -16,7 +16,7 @@ The Product and Cart Service are configured via a config server and directly ava
 
 ```
 curl -i localhost:8082/product/
-curl -i localhost:8081/cart/4711/count/
+curl -i localhost:8081/cart/4711/
 ```
 
 A zuul gateway is running on port 8080 will forward requests to `/product` and `/cart`.

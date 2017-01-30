@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Arrays;
 import java.util.HashMap;
 
 @SpringBootApplication
@@ -17,16 +18,17 @@ public class CartApplication {
         SpringApplication.run(CartApplication.class, args);
     }
 
-    @Value("${cart.items:-1}")
-    private int cartItems;
+    @Value("${springSale}")
+    private boolean springSale;
 
-    @GetMapping("{id}/count")
-    public HashMap<String, Integer> getCartItems(@PathVariable int id) {
-        HashMap<String, Integer> body = new HashMap<>();
+    @GetMapping("{id}")
+    public HashMap<String, Object> getCart(@PathVariable int id) {
+        HashMap<String, Object> body = new HashMap<>();
         body.put("id", id);
-        body.put("items", cartItems);
+        body.put("items", Arrays.asList(4711, 1820, 3433));
+        double total = 104.12;
+        body.put("total", springSale ? total * 0.9 : total);
         return body;
     }
-
 
 }
