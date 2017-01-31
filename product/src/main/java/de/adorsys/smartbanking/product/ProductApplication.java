@@ -30,4 +30,9 @@ public class ProductApplication {
         return Collections.singletonList(new Product(0, "Fallback", 12345));
     }
 
+    @GetMapping(path = "/prime")
+    public List<Product> getPrime() {
+        return Collections.singletonList(new Product(42, "Prime", 47));
+    }
+
 }
