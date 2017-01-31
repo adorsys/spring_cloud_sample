@@ -33,3 +33,9 @@ The gateway provides an aggregation of `/cart` and `/product` and will fetch eve
 ```
 curl -i localhost:8080/cart-view/314
 ```
+
+The gateway ensures that requests to `/product/prime` include a valid payment token: 
+
+```
+curl -i -H "X-PRIME-TOKEN: 4711" localhost:8080/product/prime
+```

@@ -2,6 +2,7 @@ package de.adorsys.smartbanking.gateway;
 
 import de.adorsys.smartbanking.gateway.filters.post.StatsFilter;
 import de.adorsys.smartbanking.gateway.filters.pre.DebugRequestFilter;
+import de.adorsys.smartbanking.gateway.filters.pre.PaymentFilter;
 import de.adorsys.smartbanking.gateway.filters.pre.ProductRateCounterFilter;
 import de.adorsys.smartbanking.gateway.filters.route.ProductFallbackFilter;
 import org.springframework.boot.SpringApplication;
@@ -35,6 +36,11 @@ public class GatewayApplication {
     @Bean
     public StatsFilter statsFilter() {
       return new StatsFilter();
+    }
+
+    @Bean
+    public PaymentFilter paymentFilter() {
+      return new PaymentFilter();
     }
 
 }
