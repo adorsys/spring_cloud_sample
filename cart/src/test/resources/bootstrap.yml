@@ -5,3 +5,4 @@ spring:
     config:
       uri: http://localhost:8888
       failFast: false
+springSale: true

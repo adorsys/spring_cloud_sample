@@ -2,19 +2,29 @@ package de.adorsys.smartbanking.product;
 
 public class Product {
 
+    private int id;
     private String name;
     private int price;
 
     public Product() {
     }
 
-    public Product(String name, int price) {
+    public Product(int id, String name, int price) {
+        this.id = id;
         this.name = name;
         this.price = price;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getName() {
-        return name;
+          return name;
     }
 
     public void setName(String name) {
@@ -35,7 +45,7 @@ public class Product {
         if (o == null || getClass() != o.getClass()) return false;
 
         Product product = (Product) o;
-
+        if (id != product.id) return false;
         if (price != product.price) return false;
         return name != null ? name.equals(product.name) : product.name == null;
     }
@@ -43,6 +53,7 @@ public class Product {
     @Override
     public int hashCode() {
         int result = name != null ? name.hashCode() : 0;
+        result = 31 * result + id;
         result = 31 * result + price;
         return result;
     }
@@ -50,6 +61,7 @@ public class Product {
     @Override
     public String toString() {
         return "Product{" +
+                "id='" + id + '\'' +
                 "name='" + name + '\'' +
                 ", price=" + price +
                 '}';
