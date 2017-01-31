@@ -20,7 +20,7 @@ curl -i localhost:8081/cart/4711
 ```
 
 A zuul gateway is running on port 8080 will forward requests to `/product` and `/cart`.
-It will also debug all requests.
+It will also debug all requests and dump statistics.
 
 If the rate of requests to `/product` exceeds 50 requests/seconds it will forward to a static fallback.
 

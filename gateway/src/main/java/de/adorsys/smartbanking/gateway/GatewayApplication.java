@@ -1,5 +1,6 @@
 package de.adorsys.smartbanking.gateway;
 
+import de.adorsys.smartbanking.gateway.filters.post.StatsFilter;
 import de.adorsys.smartbanking.gateway.filters.pre.DebugRequestFilter;
 import de.adorsys.smartbanking.gateway.filters.pre.ProductRateCounterFilter;
 import de.adorsys.smartbanking.gateway.filters.route.ProductFallbackFilter;
@@ -29,6 +30,11 @@ public class GatewayApplication {
     @Bean
     public ProductFallbackFilter productFallbackFilter() {
         return new ProductFallbackFilter();
+    }
+
+    @Bean
+    public StatsFilter statsFilter() {
+      return new StatsFilter();
     }
 
 }
